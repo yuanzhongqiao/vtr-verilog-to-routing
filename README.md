@@ -20,55 +20,12 @@
 <tbody>
 <tr>
 <td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" data-canonical-src="https://verilogtorouting.org/img/des90_placement_macros.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
-      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
-        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" target="_blank">
-          
-        <span data-target="animated-image.imageContainer">
-            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" style="display: block; opacity: 1;">
-          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
-        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" hidden=""></button>
-        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
-          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966">
-            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
-            </path></svg>
-            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
-              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
-            </svg>
-          </button>
-          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" target="_blank">
-            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
-            </svg>
-          </a>
-        </span>
-      </span></animated-image></td>
+      </td>
 <td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" data-canonical-src="https://verilogtorouting.org/img/des90_cpd.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
       <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
         <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" target="_blank">
           
-        <span data-target="animated-image.imageContainer">
-            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" style="display: block; opacity: 1;">
-          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
-        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" hidden=""></button>
-        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
-          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966">
-            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
-            </path></svg>
-            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
-              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
-            </svg>
-          </button>
-          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" target="_blank">
-            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
-            </svg>
-          </a>
-        </span>
-      </span></animated-image></td>
+        </td>
 </tr>
 </tbody>
 </table>
@@ -82,55 +39,12 @@
 <tbody>
 <tr>
 <td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" data-canonical-src="https://verilogtorouting.org/img/des90_nets.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
-      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
-        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" target="_blank">
-          
-        <span data-target="animated-image.imageContainer">
-            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" style="display: block; opacity: 1;">
-          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
-        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" hidden=""></button>
-        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
-          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966">
-            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
-            </path></svg>
-            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
-              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
-            </svg>
-          </button>
-          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" target="_blank">
-            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
-            </svg>
-          </a>
-        </span>
-      </span></animated-image></td>
+     </td>
 <td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" data-canonical-src="https://verilogtorouting.org/img/des90_routing_util.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
       <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
         <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" target="_blank">
           
-        <span data-target="animated-image.imageContainer">
-            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" style="display: block; opacity: 1;">
-          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
-        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" hidden=""></button>
-        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
-          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966">
-            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
-            </path></svg>
-            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
-              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
-            </svg>
-          </button>
-          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" target="_blank">
-            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
-            </svg>
-          </a>
-        </span>
-      </span></animated-image></td>
+       </td>
 </tr>
 </tbody>
 </table>
@@ -150,19 +64,7 @@
   year={2020}
 }
 </code></pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="@article{vtr8,
-  title={VTR 8: High Performance CAD and Customizable FPGA Architecture Modelling},
-  author={Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jai Min and ElDafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
-  journal={ACM Trans. Reconfigurable Technol. Syst.},
-  year={2020}
-}" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+  
   </div></div>
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font></h2><a id="user-content-download" class="anchor-element" aria-label="永久链接： 下载" href="#download"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于大多数 VTR 用户（而不是活跃的开发人员），您应该下载</font></font><a href="https://verilogtorouting.org/download" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新的官方 VTR 版本</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，该版本已经过全面回归测试。</font></font></p>
