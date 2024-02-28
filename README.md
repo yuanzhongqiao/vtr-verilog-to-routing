@@ -1,111 +1,201 @@
-# Verilog to Routing (VTR)
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/verilog-to-routing/vtr-verilog-to-routing.git)
-[![Build Status](https://github.com/verilog-to-routing/vtr-verilog-to-routing/workflows/Test/badge.svg)](https://github.com/verilog-to-routing/vtr-verilog-to-routing/actions?query=workflow%3ATest) [![Documentation Status](https://readthedocs.org/projects/vtr/badge/?version=latest)](http://docs.verilogtorouting.org/en/latest/)
-
-## Introduction
-The Verilog-to-Routing (VTR) project is a world-wide collaborative effort to provide an open-source framework for conducting FPGA architecture and CAD research and development.
-The VTR design flow takes as input a Verilog description of a digital circuit, and a description of the target FPGA architecture.
-It then performs:
-  * Elaboration, Synthesis & Partial Mapping (PARMYS)
-  * Logic Optimization & Technology Mapping (ABC)
-  * Packing, Placement, Routing & Timing Analysis (VPR)
-
-to generate FPGA speed and area results.
-VTR includes a set of benchmark designs known to work with the design flow.
-
-VTR can also produce [FASM](https://fasm.readthedocs.io/en/latest/) to program some commercial FPGAs (via [Symbiflow](https://chipsalliance.org/announcement/2022/02/18/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling/))
-
-| Placement (carry-chains highlighted) | Critical Path |
-| ------------------------------------ | ------------- |
-| <img src="https://verilogtorouting.org/img/des90_placement_macros.gif" width="350"/> | <img src="https://verilogtorouting.org/img/des90_cpd.gif" width="350"/> |
-
-| Logical Connections | Routing Utilziation |
-| ------------------- | ------------------- |
-| <img src="https://verilogtorouting.org/img/des90_nets.gif" width="350"/> | <img src="https://verilogtorouting.org/img/des90_routing_util.gif" width="350"/> |
-
-
-## Documentation
-VTR's [full documentation](https://docs.verilogtorouting.org) includes tutorials, descriptions of the VTR design flow, and tool options.
-
-Also check out our [additional support resources](SUPPORT.md).
-
-## License
-Generally most code is under MIT license, with the exception of ABC which is distributed under its own (permissive) terms.
-See the [full license](LICENSE.md) for details.
-
-## How to Cite
-The following paper may be used as a general citation for VTR:
-
-K. E. Murray, O. Petelin, S. Zhong, J. M. Wang, M. ElDafrawy, J.-P. Legault, E. Sha, A. G. Graham, J. Wu, M. J. P. Walker, H. Zeng, P. Patros, J. Luu, K. B. Kent and V. Betz "VTR 8: High Performance CAD and Customizable FPGA Architecture Modelling", ACM TRETS, 2020.
-
-Bibtex:
-```
-@article{vtr8,
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Verilog 到 布线 (VTR)</font></font></h1><a id="user-content-verilog-to-routing-vtr" class="anchor-element" aria-label="永久链接：Verilog 到路由 (VTR)" href="#verilog-to-routing-vtr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://gitpod.io/#https://github.com/verilog-to-routing/vtr-verilog-to-routing.git" rel="nofollow"><img src="https://camo.githubusercontent.com/ae79fbb17edaf2aa57ec8688b746de050226ac46d3c6c50a38c9cb3d2c64768c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476974706f642d52656164792d2d746f2d2d436f64652d626c75653f6c6f676f3d676974706f64" alt="Gitpod 准备编码" data-canonical-src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod" style="max-width: 100%;"></a>
+<a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing/actions?query=workflow%3ATest"><img src="https://github.com/verilog-to-routing/vtr-verilog-to-routing/workflows/Test/badge.svg" alt="构建状态" style="max-width: 100%;"></a> <a href="http://docs.verilogtorouting.org/en/latest/" rel="nofollow"><img src="https://camo.githubusercontent.com/f69912468983ea19c3a7b7eac9d89765c0e244136682afe5b64f83e6b0c4777f/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f7674722f62616467652f3f76657273696f6e3d6c6174657374" alt="文件状态" data-canonical-src="https://readthedocs.org/projects/vtr/badge/?version=latest" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">介绍</font></font></h2><a id="user-content-introduction" class="anchor-element" aria-label="永久链接：简介" href="#introduction"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Verilog-to-Routing (VTR) 项目是一项全球合作项目，旨在提供用于进行 FPGA 架构和 CAD 研究与开发的开源框架。</font><font style="vertical-align: inherit;">VTR 设计流程将数字电路的 Verilog 描述和目标 FPGA 架构的描述作为输入。</font><font style="vertical-align: inherit;">然后它执行：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精化、综合和部分映射 (PARMYS)</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">逻辑优化与技术映射（ABC）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">封装、布局、布线和时序分析 (VPR)</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生成 FPGA 速度和面积结果。</font><font style="vertical-align: inherit;">VTR 包括一组已知可与设计流程配合使用的基准设计。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VTR还可以生产</font></font><a href="https://fasm.readthedocs.io/en/latest/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FASM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">来对一些商业FPGA进行编程（通过</font></font><a href="https://chipsalliance.org/announcement/2022/02/18/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Symbiflow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）</font></font></p>
+<table>
+<thead>
+<tr>
+<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">放置（进位链突出显示）</font></font></th>
+<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关键路径</font></font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" data-canonical-src="https://verilogtorouting.org/img/des90_placement_macros.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" target="_blank">
+          
+        <span data-target="animated-image.imageContainer">
+            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" style="display: block; opacity: 1;">
+          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
+        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" hidden=""></button>
+        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
+          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966">
+            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
+            </path></svg>
+            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
+              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
+            </svg>
+          </button>
+          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/8fea4fafaae38570cb69b6065107b76e277320254c99af949e6498cf46b44aa8/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f706c6163656d656e745f6d6163726f732e676966" target="_blank">
+            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
+            </svg>
+          </a>
+        </span>
+      </span></animated-image></td>
+<td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" data-canonical-src="https://verilogtorouting.org/img/des90_cpd.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" target="_blank">
+          
+        <span data-target="animated-image.imageContainer">
+            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" style="display: block; opacity: 1;">
+          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
+        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" hidden=""></button>
+        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
+          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966">
+            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
+            </path></svg>
+            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
+              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
+            </svg>
+          </button>
+          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/044c654bb9fe56bf4f5a27fd811ef3d69d67a5d36742f6e6c23064cc082ca4ea/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6370642e676966" target="_blank">
+            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
+            </svg>
+          </a>
+        </span>
+      </span></animated-image></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">逻辑连接</font></font></th>
+<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">路由利用率</font></font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" data-canonical-src="https://verilogtorouting.org/img/des90_nets.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" target="_blank">
+          
+        <span data-target="animated-image.imageContainer">
+            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" style="display: block; opacity: 1;">
+          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
+        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" hidden=""></button>
+        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
+          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966">
+            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
+            </path></svg>
+            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
+              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
+            </svg>
+          </button>
+          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/17c9da14b037e3d8a952e0ed330823bdaf01d58155fc66ad05e4cce68236eb4d/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f6e6574732e676966" target="_blank">
+            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
+            </svg>
+          </a>
+        </span>
+      </span></animated-image></td>
+<td><animated-image data-catalyst="" style="width: 350px;"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" data-canonical-src="https://verilogtorouting.org/img/des90_routing_util.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" target="_blank">
+          
+        <span data-target="animated-image.imageContainer">
+            <img data-target="animated-image.replacedImage" alt="68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" style="display: block; opacity: 1;">
+          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="350" height="260"></canvas></span></a>
+        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" hidden=""></button>
+        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
+          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966">
+            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
+            </path></svg>
+            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
+              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
+            </svg>
+          </button>
+          <a data-target="animated-image.openButton" aria-label="Open 68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966 in new window" class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/7d4eb23b13fe5ba4ad3aeb87fe4efc1ceef0c693c8a7b2e587732c811d1b3b3f/68747470733a2f2f766572696c6f67746f726f7574696e672e6f72672f696d672f64657339305f726f7574696e675f7574696c2e676966" target="_blank">
+            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
+            </svg>
+          </a>
+        </span>
+      </span></animated-image></td>
+</tr>
+</tbody>
+</table>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2><a id="user-content-documentation" class="anchor-element" aria-label="永久链接：文档" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VTR 的</font></font><a href="https://docs.verilogtorouting.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完整文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包括教程、VTR 设计流程的描述和工具选项。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">另请查看我们的</font></font><a href="/verilog-to-routing/vtr-verilog-to-routing/blob/master/SUPPORT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他支持资源</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2><a id="user-content-license" class="anchor-element" aria-label="永久链接：许可证" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一般来说，大多数代码都在 MIT 许可下，但 ABC 除外，它是根据自己的（许可）条款分发的。</font><font style="vertical-align: inherit;">有关详细信息，请参阅</font></font><a href="/verilog-to-routing/vtr-verilog-to-routing/blob/master/LICENSE.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完整许可证</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如何引用</font></font></h2><a id="user-content-how-to-cite" class="anchor-element" aria-label="永久链接：如何引用" href="#how-to-cite"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以下论文可作为 VTR 的一般引用：</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">KE Murray、O. Petelin、S. Zhu、JM Wang、M. ElDafrawy、J.-P。</font><font style="vertical-align: inherit;">Legault、E. Sha、AG Graham、J. Wu、MJP Walker、H. Zeng、P. Patros、J. Luu、KB Kent 和 V. Betz “VTR 8：高性能 CAD 和可定制 FPGA 架构建模”，ACM TRETS ，2020。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">书目：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>@article{vtr8,
   title={VTR 8: High Performance CAD and Customizable FPGA Architecture Modelling},
   author={Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jai Min and ElDafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
   journal={ACM Trans. Reconfigurable Technol. Syst.},
   year={2020}
 }
-```
-
-## Download
-For most users of VTR (rather than active developers) you should download the [latest official VTR release](https://verilogtorouting.org/download), which has been fully regression tested.
-
-## Building
-On unix-like systems run `make` from the root VTR directory.
-
-For more details see the [building instructions](BUILDING.md).
-
-#### Docker
-We provide a Dockerfile that sets up all the necessary packages for VTR to run.
-For more details see [here](dev/DOCKER_DEPLOY.md).
-
-## Mailing Lists
-If you have questions, or want to keep up-to-date with VTR, consider joining our mailing lists:
-
-[VTR-Announce](https://groups.google.com/forum/#!forum/vtr-announce): VTR release announcements (low traffic)
-
-[VTR-Users](https://groups.google.com/forum/#!forum/vtr-users): Discussions about using VTR
-
-[VTR-Devel](https://groups.google.com/forum/#!forum/vtr-devel): Discussions about VTR development
-
-[VTR-Commits](https://groups.google.com/forum/#!forum/vtr-commits): VTR revision control commits
-
-## Development
-This is the development trunk for the Verilog-to-Routing project.
-Unlike the nicely packaged releases that we create, you are working with code in a constant state of flux.
-You should expect that the tools are not always stable and that more work is needed to get the flow to run.
-
-For new developers, please follow the [quickstart guide](https://docs.verilogtorouting.org/en/latest/quickstart/).
-
-We follow a feature branch flow, where you create a new branch for new code, test it, measure its Quality of Results, and eventually produce a pull request for review by other developers. Pull requests that meet all the quality and review criteria are then merged into the master branch by a developer with the authority to do so.
-
-In addition to measuring QoR and functionality automatically on pull requests, we do periodic automated testing of the master using BuildBot, and the results can be viewed below to track QoR and stability.
-* [Trunk Status](http://builds.verilogtorouting.org:8080/waterfall)
-* [QoR Tracking](http://builds.verilogtorouting.org:8080/)
-
-*IMPORTANT*: A broken build must be fixed at top priority. You break the build if your commit breaks any of the automated regression tests.
-
-For additional information see the [developer README](README.developers.md).
-
-### Contributing to VTR
-If you'd like to contribute to VTR see our [Contribution Guidelines](CONTRIBUTING.md).
-
-## Contributors
-*Please keep this up-to-date*
-
-Professors: Kenneth Kent, Vaughn Betz, Jonathan Rose, Jason Anderson, Peter Jamieson
-
-Research Assistants: Aaron Graham
-
-
-Graduate Students: Kevin Murray, Jason Luu, Oleg Petelin, Xifian Tang, Mohamed Elgammal, Mohamed Eldafrawy, Jeffrey Goeders, Chi Wai Yu, Andrew Somerville, Ian Kuon, Alexander Marquardt, Andy Ye, Wei Mark Fang, Tim Liu, Charles Chiasson, Panagiotis (Panos) Patros, Jean-Philippe Legault, Aaron Graham, Nasrin Eshraghi Ivari, Maria Patrou, Scott Young, Sarah Khalid, Seyed Alireza Damghani, Harpreet Kaur, Daniel Khadivi, Alireza Azadi
-
-
-Summer Students: Opal Densmore, Ted Campbell, Cong Wang, Peter Milankov, Scott Whitty, Michael Wainberg, Suya Liu, Miad Nasr, Nooruddin Ahmed, Thien Yu, Long Yu Wang, Matthew J.P. Walker, Amer Hesson, Sheng Zhong, Hanqing Zeng, Vidya Sankaranarayanan, Jia Min Wang, Eugene Sha, Jean-Philippe Legault, Richard Ren, Dingyu Yang, Alexandrea Demmings, Hillary Soontiens, Julie Brown, Bill Hu, David Baines, Mahshad Farahani, Helen Dai, Daniel Zhai
-
-Companies: Intel, Huawei, Lattice, Altera Corporation, Texas Instruments, Google, Antmicro
-
-Funding Agencies: NSERC, Semiconductor Research Corporation
-
-
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="@article{vtr8,
+  title={VTR 8: High Performance CAD and Customizable FPGA Architecture Modelling},
+  author={Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jai Min and ElDafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
+  journal={ACM Trans. Reconfigurable Technol. Syst.},
+  year={2020}
+}" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font></h2><a id="user-content-download" class="anchor-element" aria-label="永久链接： 下载" href="#download"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于大多数 VTR 用户（而不是活跃的开发人员），您应该下载</font></font><a href="https://verilogtorouting.org/download" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新的官方 VTR 版本</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，该版本已经过全面回归测试。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建筑</font></font></h2><a id="user-content-building" class="anchor-element" aria-label="永久链接： 建筑" href="#building"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在类 Unix 系统上</font></font><code>make</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从 VTR 根目录运行。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关更多详细信息，请参阅</font></font><a href="/verilog-to-routing/vtr-verilog-to-routing/blob/master/BUILDING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搭建说明</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">码头工人</font></font></h4><a id="user-content-docker" class="anchor-element" aria-label="永久链接：Docker" href="#docker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们提供了一个 Dockerfile，用于设置 VTR 运行所需的所有包。</font><font style="vertical-align: inherit;">有关更多详细信息，请参见</font></font><a href="/verilog-to-routing/vtr-verilog-to-routing/blob/master/dev/DOCKER_DEPLOY.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此处</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邮件列表</font></font></h2><a id="user-content-mailing-lists" class="anchor-element" aria-label="永久链接：邮件列表" href="#mailing-lists"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您有疑问，或者想了解 VTR 的最新动态，请考虑加入我们的邮件列表：</font></font></p>
+<p dir="auto"><a href="https://groups.google.com/forum/#!forum/vtr-announce" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VTR-Announce</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：VTR发布公告（低流量）</font></font></p>
+<p dir="auto"><a href="https://groups.google.com/forum/#!forum/vtr-users" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VTR-Users</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : 关于使用 VTR 的讨论</font></font></p>
+<p dir="auto"><a href="https://groups.google.com/forum/#!forum/vtr-devel" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VTR-Devel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : 关于 VTR 开发的讨论</font></font></p>
+<p dir="auto"><a href="https://groups.google.com/forum/#!forum/vtr-commits" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VTR-Commits</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : VTR 修订控制提交</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展</font></font></h2><a id="user-content-development" class="anchor-element" aria-label="永久链接： 发展" href="#development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是 Verilog-to-Routing 项目的开发主干。</font><font style="vertical-align: inherit;">与我们创建的精美打包版本不同，您正在处理处于不断变化状态的代码。</font><font style="vertical-align: inherit;">您应该预料到这些工具并不总是稳定，并且需要做更多的工作才能让流程运行。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于新开发人员，请遵循</font></font><a href="https://docs.verilogtorouting.org/en/latest/quickstart/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快速入门指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们遵循功能分支流程，您可以在其中为新代码创建新分支，对其进行测试，衡量其结果质量，并最终生成拉取请求以供其他开发人员审核。</font><font style="vertical-align: inherit;">然后，满足所有质量和审查标准的拉取请求将由有权执行此操作的开发人员合并到主分支中。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">除了根据拉取请求自动测量 QoR 和功能之外，我们还使用 BuildBot 对 master 进行定期自动化测试，结果可以在下面查看以跟踪 QoR 和稳定性。</font></font></p>
+<ul dir="auto">
+<li><a href="http://builds.verilogtorouting.org:8080/waterfall" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中继状态</font></font></a></li>
+<li><a href="http://builds.verilogtorouting.org:8080/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">质量跟踪</font></font></a></li>
+</ul>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">重要提示</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：必须优先修复损坏的构建。</font><font style="vertical-align: inherit;">如果您的提交破坏了任何自动回归测试，您就会破坏构建。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关更多信息，请参阅</font></font><a href="/verilog-to-routing/vtr-verilog-to-routing/blob/master/README.developers.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员自述文件</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为VTR做贡献</font></font></h3><a id="user-content-contributing-to-vtr" class="anchor-element" aria-label="永久链接：为 VTR 做出贡献" href="#contributing-to-vtr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想为 VTR 做出贡献，请参阅我们的</font></font><a href="/verilog-to-routing/vtr-verilog-to-routing/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献者</font></font></h2><a id="user-content-contributors" class="anchor-element" aria-label="永久链接：贡献者" href="#contributors"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请保持最新状态</font></font></em></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">教授：肯尼思·肯特、沃恩·贝茨、乔纳森·罗斯、杰森·安德森、彼得·贾米森</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">研究助理：亚伦·格雷厄姆</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">研究生：Kevin Murray、Jason Luu、Oleg Petelin、Xifian Tang、Mohamed Elgammal、Mohamed Eldafrawy、Jeffrey Goeders、Chi Wai Yu、Andrew Somerville、Ian Kuon、Alexander Marquardt、Andy Ye、Wei Mark Fang、Tim Liu、Charles Chiasson、帕纳吉奥蒂斯 (帕诺斯) 帕特罗斯、让-菲利普·勒戈特、亚伦·格雷厄姆、纳斯林·埃什拉吉·伊瓦里、玛丽亚·帕特鲁、斯科特·杨、莎拉·哈立德、赛义德·阿利雷扎·达姆加尼、哈普里特·考尔、丹尼尔·哈迪维、阿里雷扎·阿扎迪</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">暑期学生：Opal&ZeroWidthSpace;&ZeroWidthSpace; Densmore、Ted Campbell、Cong Wang、Peter Milankov、Scott Whitty、Michael Wainberg、Suya Liu、Miad Nasr、Nooruddin Ahmed、Thien Yu、Long Yu Wang、Matthew JP Walker、Amer Hesson、Shengzhong、Hanqing Zeng、 Vidya Sankaranarayanan、王佳敏、尤金·沙、Jean-Philippe Legault、Richard Ren、杨鼎宇、Alexandrea Demmings、Hillary Soontiens、Julie Brown、Bill Hu、David Baines、Mahshad Farahani、Helen Dai、Daniel Zhai</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">公司：英特尔、华为、莱迪思、Altera 公司、德州仪器、谷歌、Antmicro</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">资助机构：NSERC、半导体研究公司</font></font></p>
+</article></div>
